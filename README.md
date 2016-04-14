@@ -21,9 +21,13 @@ Tested on OSX only for now.
 
 I use electron to rapidly develop javascript components on OSX. I use electron as an alternative to webpack dev-server as electron takes care of es6 transpiling.
 
-You must install electron-prebuilt globally
+You must install electron-prebuilt globally:
 
     npm install -g electron-prebuilt
+
+Then install any node dependency:
+
+    npm install
 
 See the usage folders and double click on the `_electron.command` file in any usage folder.
 
