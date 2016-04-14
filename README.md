@@ -25,10 +25,6 @@ You must install electron-prebuilt globally:
 
     npm install -g electron-prebuilt
 
-Then install any node dependency:
-
-    npm install
-
 See the usage folders and double click on the `_electron.command` file in any usage folder.
 
   * elm-embed/usage/ -> _electron.command

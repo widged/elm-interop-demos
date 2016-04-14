@@ -1,3 +1,5 @@
+/* jshint esnext: true */
+
 function appendToHead(node) {
   var parentNode    = document.getElementsByTagName('head')[0];
   parentNode.appendChild(node);
@@ -18,7 +20,5 @@ function linkStyle(url) {
 
 export default {
   style: injectStyle,
-  link: function(...urls) {
-    urls.forEach(linkStyle)
-   }
-}
+  link: function(...urls) { urls.forEach(linkStyle); }
+};

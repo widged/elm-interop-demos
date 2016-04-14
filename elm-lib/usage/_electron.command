@@ -1,3 +1,3 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-electron ../../dependencies/electron-react-dev/electron_app.js
+electron ../../libs/electron-dev/electron_app.js
