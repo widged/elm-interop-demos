@@ -1,6 +1,5 @@
 /* jshint esnext: true */
 
-import React from 'react';
 import {Embed} from '../../imports.js';
 
 const {appendToHead, scriptNode} = Embed;
