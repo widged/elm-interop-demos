@@ -6,7 +6,7 @@ var FN = {};
 
 var windowUrl        = 'file://' + __dirname + '/electron_window.html';
 var windowDimensions = { width: 1000, height: 800 };
-var reactdevtools    = path.resolve(__dirname + '/vendor/react-devtools');
+// var reactdevtools    = path.resolve(__dirname + '/vendor/react-devtools');
 
 var app           = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
@@ -33,7 +33,7 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
 
-  BrowserWindow.addDevToolsExtension(reactdevtools);
+  // BrowserWindow.addDevToolsExtension(reactdevtools);
   mainWindow = new BrowserWindow(windowDimensions);
 
   // and load the index.html of the app.
