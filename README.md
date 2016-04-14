@@ -2,7 +2,7 @@
 
 This repo illustrates 3 different ways that transpiled Elm can be used with Javascript Components. The priority was to keep the examples as simple as possible. There is no hot reloading or webpack conig.
 
-Tested on OSX only for now. 
+Tested on OSX only for now.
 
 ## elm-embed
 
@@ -29,9 +29,15 @@ See the usage folders and double click on the `_electron.command` file in any us
 
   * elm-embed/usage/ -> _electron.command
   * elm-lib/usage/  ->  _electron.command
-  * elm-ports/usage/ -> _electron.command
+  * elm-port/usage/ -> _electron.command
 
 # Development
+
+Install all elm package dependencies. In each elm folder:
+
+    elm-embed/elm/ -> elm package install
+    elm-lib/elm/ -> elm package install
+    elm-port/elm/ -> elm package install
 
 Double click the `_watch.command` file in any of the elm folder to automatically re-transpile elm whenever files change. Alternatively, call it from the command line `./_watch.command`.
 
