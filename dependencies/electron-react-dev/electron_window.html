@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Electron Development Environment</title>
+    <script type="text/javascript">
+      var cwd = process.cwd();
+      document.write(`<base href="${cwd}/" />`);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+
+    function appendToHead(node) {
+      var headNode    = document.getElementsByTagName('head')[0];
+      headNode.appendChild(node);
+    }
+
+    function scriptNode(url) {
+      var node  = document.createElement('script');
+      node.type = 'text/javascript';
+      node.src = url;
+      return node;
+    }
+
+    window.onload = function(){
+      require('babel/register')(); // { presets: [ 'es2015' ]}
+      var cwd       = process.cwd();
+      var headNode  = document.getElementsByTagName('head')[0];
+      appendToHead(scriptNode(__dirname +  '/context_menu.js'));
+      require(process.cwd() + "/script.es6.js");
+    };
+    </script>
+
+  </body>
+</html>

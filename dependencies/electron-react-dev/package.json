@@ -1,0 +1,19 @@
+{
+  "name": "electron-react-dev",
+  "version": "1.0.0",
+  "description": "Setup for quickly writing dumb react components over electron",
+  "main": "electron_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "react"
+  ],
+  "author": "Marielle <mlange@widged.com> (http://widged.com)",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  }
+}
