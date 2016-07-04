@@ -1,19 +1,28 @@
 {
-  "name": "electron-react-dev",
+  "name": "electron-runner",
   "version": "1.0.0",
-  "description": "Setup for quickly writing dumb react components over electron",
-  "main": "electron_app.js",
+  "description": "A minimal Electron application",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
   },
   "keywords": [
-    "electron",
-    "react"
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
   ],
-  "author": "Marielle <mlange@widged.com> (http://widged.com)",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/electron/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
   }
 }
