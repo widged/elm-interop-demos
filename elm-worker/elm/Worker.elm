@@ -12,7 +12,7 @@ import Task
 main =
   App.program
     -- Somehow, the component doesn't listen to ports until it is fully loaded... even if there is no view to mount
-    { init = (initialState, now)
+    { init = ((), now)
     , view = always (Html.text "")
     , update = update
     , subscriptions = (\_ -> stringToConvert StringToConvert )
@@ -20,7 +20,6 @@ main =
 
 -- MODEL
 type alias Store = ()
-initialState = ()
 
 -- UPDATE
 type Msg
