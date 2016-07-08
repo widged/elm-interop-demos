@@ -1,4 +1,4 @@
--- elm-make Main.elm --output ../usage/port.js
+-- elm-make Worker.elm --output ../usage/worker.js
 
 port module Worker exposing (..)
 
