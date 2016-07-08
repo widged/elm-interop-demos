@@ -15,9 +15,7 @@ main =
     { init = (initialState, now)
     , view = always (Html.text "")
     , update = update
-    , subscriptions = (\_ -> Sub.batch
-      [ stringToConvert StringToConvert
-      ] )
+    , subscriptions = (\_ -> stringToConvert StringToConvert )
     }
 
 -- MODEL

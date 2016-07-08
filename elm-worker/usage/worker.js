@@ -7708,11 +7708,7 @@ var _user$project$Worker$main = {
 				_elm_lang$html$Html$text('')),
 			update: _user$project$Worker$update,
 			subscriptions: function (_p1) {
-				return _elm_lang$core$Platform_Sub$batch(
-					_elm_lang$core$Native_List.fromArray(
-						[
-							_user$project$Worker$stringToConvert(_user$project$Worker$StringToConvert)
-						]));
+				return _user$project$Worker$stringToConvert(_user$project$Worker$StringToConvert);
 			}
 		})
 };
