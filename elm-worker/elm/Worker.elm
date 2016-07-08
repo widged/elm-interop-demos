@@ -25,7 +25,7 @@ initialState = ()
 -- UPDATE
 type Msg
   = WorkerReady
-  |  StringConverted
+  | StringConverted
   | StringToConvert (String)
 
 now : Cmd Msg
