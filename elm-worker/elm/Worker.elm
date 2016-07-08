@@ -1,6 +1,6 @@
 -- elm-make Main.elm --output ../usage/port.js
 
-port module Main exposing (..)
+port module Worker exposing (..)
 
 import Html exposing (Html)
 import Html.App as App

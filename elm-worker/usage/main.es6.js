@@ -10,7 +10,7 @@ mountNode.innerHTML = 'Interact with ';
 // specific to an electron environment
 var Elm = require('./worker.js');
 
-var {ports} = Elm.Main.worker();
+var {ports} = Elm.Worker.worker();
 
 ports.workerReady.subscribe(function() {
   console.log('[WORKER READY]')

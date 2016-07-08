@@ -7649,21 +7649,21 @@ var _elm_lang$html$Html_App$beginnerProgram = function (_p1) {
 };
 var _elm_lang$html$Html_App$map = _elm_lang$virtual_dom$VirtualDom$map;
 
-var _user$project$Main$upperCase = function (str) {
+var _user$project$Worker$upperCase = function (str) {
 	return _elm_lang$core$String$toUpper(str);
 };
-var _user$project$Main$initialState = {ctor: '_Tuple0'};
-var _user$project$Main$workerReady = _elm_lang$core$Native_Platform.outgoingPort(
+var _user$project$Worker$initialState = {ctor: '_Tuple0'};
+var _user$project$Worker$workerReady = _elm_lang$core$Native_Platform.outgoingPort(
 	'workerReady',
 	function (v) {
 		return null;
 	});
-var _user$project$Main$stringConverted = _elm_lang$core$Native_Platform.outgoingPort(
+var _user$project$Worker$stringConverted = _elm_lang$core$Native_Platform.outgoingPort(
 	'stringConverted',
 	function (v) {
 		return v;
 	});
-var _user$project$Main$update = F2(
+var _user$project$Worker$update = F2(
 	function (msg, state) {
 		var _p0 = msg;
 		switch (_p0.ctor) {
@@ -7671,7 +7671,7 @@ var _user$project$Main$update = F2(
 				return {
 					ctor: '_Tuple2',
 					_0: state,
-					_1: _user$project$Main$workerReady(
+					_1: _user$project$Worker$workerReady(
 						{ctor: '_Tuple0'})
 				};
 			case 'StringConverted':
@@ -7684,42 +7684,42 @@ var _user$project$Main$update = F2(
 				return {
 					ctor: '_Tuple2',
 					_0: state,
-					_1: _user$project$Main$stringConverted(
-						_user$project$Main$upperCase(_p0._0))
+					_1: _user$project$Worker$stringConverted(
+						_user$project$Worker$upperCase(_p0._0))
 				};
 		}
 	});
-var _user$project$Main$stringToConvert = _elm_lang$core$Native_Platform.incomingPort('stringToConvert', _elm_lang$core$Json_Decode$string);
-var _user$project$Main$StringToConvert = function (a) {
+var _user$project$Worker$stringToConvert = _elm_lang$core$Native_Platform.incomingPort('stringToConvert', _elm_lang$core$Json_Decode$string);
+var _user$project$Worker$StringToConvert = function (a) {
 	return {ctor: 'StringToConvert', _0: a};
 };
-var _user$project$Main$StringConverted = {ctor: 'StringConverted'};
-var _user$project$Main$WorkerReady = {ctor: 'WorkerReady'};
-var _user$project$Main$now = A3(
+var _user$project$Worker$StringConverted = {ctor: 'StringConverted'};
+var _user$project$Worker$WorkerReady = {ctor: 'WorkerReady'};
+var _user$project$Worker$now = A3(
 	_elm_lang$core$Task$perform,
-	_elm_lang$core$Basics$always(_user$project$Main$WorkerReady),
-	_elm_lang$core$Basics$always(_user$project$Main$WorkerReady),
+	_elm_lang$core$Basics$always(_user$project$Worker$WorkerReady),
+	_elm_lang$core$Basics$always(_user$project$Worker$WorkerReady),
 	_elm_lang$core$Time$now);
-var _user$project$Main$main = {
+var _user$project$Worker$main = {
 	main: _elm_lang$html$Html_App$program(
 		{
-			init: {ctor: '_Tuple2', _0: _user$project$Main$initialState, _1: _user$project$Main$now},
+			init: {ctor: '_Tuple2', _0: _user$project$Worker$initialState, _1: _user$project$Worker$now},
 			view: _elm_lang$core$Basics$always(
 				_elm_lang$html$Html$text('')),
-			update: _user$project$Main$update,
+			update: _user$project$Worker$update,
 			subscriptions: function (_p1) {
 				return _elm_lang$core$Platform_Sub$batch(
 					_elm_lang$core$Native_List.fromArray(
 						[
-							_user$project$Main$stringToConvert(_user$project$Main$StringToConvert)
+							_user$project$Worker$stringToConvert(_user$project$Worker$StringToConvert)
 						]));
 			}
 		})
 };
 
 var Elm = {};
-Elm['Main'] = Elm['Main'] || {};
-_elm_lang$core$Native_Platform.addPublicModule(Elm['Main'], 'Main', typeof _user$project$Main$main === 'undefined' ? null : _user$project$Main$main);
+Elm['Worker'] = Elm['Worker'] || {};
+_elm_lang$core$Native_Platform.addPublicModule(Elm['Worker'], 'Worker', typeof _user$project$Worker$main === 'undefined' ? null : _user$project$Worker$main);
 
 if (typeof define === "function" && define['amd'])
 {
